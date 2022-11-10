@@ -24,3 +24,6 @@ a {
     background: black;
   }
 }
+
+@import url(./Header.css);
+@import url(./Footer.css);

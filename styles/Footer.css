@@ -1,0 +1,41 @@
+.footer {
+  margin: 0 auto;
+  min-height: 48px;
+  max-width: 1280px;
+  padding: 20px 40px;
+  background: rgb(255, 234, 220);
+  background: radial-gradient(
+    circle,
+    rgba(255, 234, 220, 1) 0%,
+    rgba(255, 255, 255, 1) 40%
+  );
+}
+
+.footer__content {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer__icon {
+  max-width: 28px;
+  max-height: 28px;
+}
+
+.footer__text {
+  color: #0f162694;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+  margin: 12px auto;
+}
+
+@media screen and (max-width: 540px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .footer__text {
+    margin: 0;
+    padding: 10px 20px;
+  }
+}
