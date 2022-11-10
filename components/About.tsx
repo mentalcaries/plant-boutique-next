@@ -1,9 +1,9 @@
-import './About.css';
 import {motion} from 'framer-motion';
 
-import portrait from '../../images/portrait.jpg';
-import handpot from '../../images/about2.jpg';
-import painting from '../../images/painting.jpg';
+import portrait from '../public/images/portrait.jpg';
+import handpot from '../public/images/about2.jpg';
+import painting from '../public/images/painting.jpg';
+import Image from 'next/image';
 
 function About() {
   return (
@@ -16,14 +16,14 @@ function About() {
       <div className="about__overlay">
         <div className="about__photos">
           <span className="about__photo">
-            <img src={handpot} alt="" />
+            <Image src={handpot} alt="" />
           </span>
           <span className="about__photo">
-            <img src={painting} alt="" />
+            <Image src={painting} alt="" />
           </span>
         </div>
         <div className="about__content">
-          <img src={portrait} alt="Our founder" className="about__image" />
+          <Image src={portrait} alt="Our founder" className="about__image" />
           <h2 className="about__title">Sharing Our Plant Love With Everyone</h2>
           <p className="about__subtitle">By People Who Really Love Plants</p>
           <p className="about__paragraph">
@@ -32,7 +32,7 @@ function About() {
             really love plants too!
           </p>
           <p className="about__paragraph">
-            Since then, we've expanded our line-up to include wire trellises,
+            Since then, we&apos;ve expanded our line-up to include wire trellises,
             hanging planters as well as custom orders (Have you seen the sloth
             trellis?!). Take a look around, you might just find something for
             your plant babies!

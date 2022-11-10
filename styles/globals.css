@@ -1,18 +1,8 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url(../vendor/normalize.css);
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+body{
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
 
-* {
-  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +15,9 @@ a {
   }
 }
 
+@import url(../vendor/fonts/fonts.css);
 @import url(./components/Header.css);
+@import url(./components/Burger.css);
 @import url(./components/Footer.css);
 @import url(./components/Main.css);
+@import url(./components/About.css);
