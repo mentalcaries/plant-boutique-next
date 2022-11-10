@@ -10,7 +10,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <title>The Plant Boutique</title>
         <meta
           name="The Plant Boutique"
-          content="Handcrafted plant accessories."
+          content="chic handcrafted plant accessories."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -25,5 +25,6 @@ a {
   }
 }
 
-@import url(./Header.css);
-@import url(./Footer.css);
+@import url(./components/Header.css);
+@import url(./components/Footer.css);
+@import url(./components/Main.css);

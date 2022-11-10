@@ -1,0 +1,21 @@
+.collection {
+  background-image: url('../../images/collection.jpg');
+  width: 100%;
+
+}
+
+.collection__cards {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 32px;
+}
+
+@media screen and (max-width:540px) {
+  .collection__cards{
+    padding:0;
+  }
+}
