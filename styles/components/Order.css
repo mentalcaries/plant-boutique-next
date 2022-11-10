@@ -1,5 +1,5 @@
 .order {
-  background-image: url('../../images/order.jpg');
+  background-image: url('../../public/images/order.jpg');
   max-width: 1440px;
   height: 80vh;
   background-size: cover;
@@ -45,4 +45,5 @@
 }
 .order__icon{
 max-width: 96px;
+max-height: 96px;
 }

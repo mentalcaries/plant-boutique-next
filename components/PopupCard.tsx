@@ -1,5 +1,5 @@
-import './PopupCard.css';
-import { Product } from '../../utils/types';
+import Image from 'next/image';
+import { Product } from '../utils/types';
 
 type Props = {
   isPopupCardOpen: boolean;
@@ -21,12 +21,12 @@ function PopupCard({isPopupCardOpen, onClose, cardData}: Props): JSX.Element {
             <h2 className="popup__title">{cardData?.title}</h2>
             <div className="popup__images">
 
-              {cardData?.productImages.map((image)=> 
-              <img src={image} alt="" className="popup__image" />)}
+              {cardData?.productImages.map((image, index)=> 
+              <Image src={image} alt="" className="popup__image" key={index} />)}
               
             </div>
-            {cardData?.description.map((paragraph)=>{
-              return <p className="popup__text">{paragraph}</p>
+            {cardData?.description.map((paragraph, index)=>{
+              return <p className="popup__text" key={index}>{paragraph}</p>
             })}
  
           </article>

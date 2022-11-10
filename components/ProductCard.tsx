@@ -1,6 +1,6 @@
-import './ProductCard.css';
 import {motion} from 'framer-motion';
-import {Product} from '../../utils/types';
+import {Product} from '../utils/types';
+import Image  from 'next/image'
 
 // fix type
 type Props = {
@@ -17,7 +17,7 @@ function ProductCard({onOpen, product, onCardClick}: Props): JSX.Element {
 
   return (
     <article className="card" onClick={handleClickProduct}>
-      <img src={product.coverImage} alt="Product" className="card__image" />
+      <Image src={product.coverImage} alt="Product" className="card__image" />
       <motion.div
         className="card__overlay"
         initial={{opacity: 0}}

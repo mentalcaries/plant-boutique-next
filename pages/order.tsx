@@ -1,10 +1,9 @@
-import {Link} from 'react-router-dom';
-import './Order.css';
-
 import {motion} from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import instagram from '../../images/ig.gif';
-import mail from '../../images/mail.svg';
+import instagram from '../public/images/ig.gif';
+import mail from '../public/images/mail.svg';
 
 function Order() {
   return (
@@ -18,7 +17,7 @@ function Order() {
         <h2 className="order__title">How To Order</h2>
         {/* <p className="order__subtitle">We're still growing!</p> */}
         <p className="order__subtitle">
-          You want plant accessories. We have plant accessories. Let's chat on
+          You want plant accessories. We have plant accessories. Let&apos;s chat on
           Instagram or via our Contact Form!
         </p>
         <div className="order__icons">
@@ -27,10 +26,10 @@ function Order() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={instagram} alt="Instagram" className="order__icon" />
+            <Image src={instagram} alt="Instagram" className="order__icon" />
           </a>
-          <Link to="/contact">
-            <img src={mail} alt="Email" className="order__icon" />
+          <Link href="/contact">
+            <Image src={mail} alt="Email" className="order__icon" />
           </Link>
         </div>
       </div>

@@ -1,8 +1,7 @@
 @import url(../vendor/normalize.css);
 
-body{
+body {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,3 +20,8 @@ body{
 @import url(./components/Footer.css);
 @import url(./components/Main.css);
 @import url(./components/About.css);
+@import url(./components/Collection.css);
+@import url(./components/Order.css);
+@import url(./components/Contact.css);
+@import url(./components/PopupCard.css);
+@import url(./components/ProductCard.css);
