@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
-function Contact() {
+const Contact = () => {
   return (
     <motion.section
       className="contact"
-      initial={{opacity: 0}}
-      animate={{opacity: 1, transition: {duration: 0.5}}}
-      exit={{opacity: 0, transition: {duration: 0.3}}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
       <form action="" className="contact__form">
         <h2 className="contact__title">Get In Touch!</h2>
@@ -66,6 +66,6 @@ function Contact() {
       </form>
     </motion.section>
   );
-}
+};
 
 export default Contact;

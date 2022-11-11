@@ -1,17 +1,19 @@
-import {MouseEvent, useState, useEffect} from 'react';
-import './Burger.css';
-import {motion, AnimatePresence} from 'framer-motion';
-import {Link} from 'react-router-dom';
+import { MouseEvent, useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
-function Burger() {
+const Burger = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   function toggleMenu() {
     setMenuIsOpen(!menuIsOpen);
   }
 
-  function handleOutsideClick(evt: MouseEvent): void {
-    if (menuIsOpen && (evt.target as Element).className === 'overlay') {
+  function handleOutsideClick(event: MouseEvent): void {
+    if (
+      menuIsOpen &&
+      (event.target as Element).className === 'burger__overlay'
+    ) {
       toggleMenu();
     }
   }
@@ -30,9 +32,9 @@ function Burger() {
   return (
     <motion.nav
       className="burger"
-      initial={{opacity: 0, x: 250}}
-      animate={{opacity: 1, x: 0}}
-      transition={{duration: 0.5}}
+      initial={{ opacity: 0, x: 250 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <button
         className={`hamburger hamburger--vortex ${
@@ -49,17 +51,17 @@ function Burger() {
       <AnimatePresence>
         {menuIsOpen && (
           <motion.div
-            className="overlay"
+            className="burger__overlay"
             onClick={handleOutsideClick}
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            exit={{opacity: 0, transition: {duration: 0.3}}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.3 } }}
           >
             <motion.ul
-              initial={{opacity: 0}}
-              animate={{opacity: 1}}
-              transition={{duration: 0.05}}
-              exit={{opacity: 0, transition: {duration: 0.3}}}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.05 }}
+              exit={{ opacity: 0, transition: { duration: 0.3 } }}
               className={`burger__items 
             }`}
             >
@@ -71,7 +73,7 @@ function Burger() {
                 ['Contact', 'contact'],
               ].map(([title, url]) => (
                 <li className="burger__item" key={title} onClick={toggleMenu}>
-                  <Link to={url} className="burger__link">
+                  <Link href={url} className="burger__link">
                     {title}
                   </Link>
                 </li>
@@ -82,6 +84,6 @@ function Burger() {
       </AnimatePresence>
     </motion.nav>
   );
-}
+};
 
 export default Burger;

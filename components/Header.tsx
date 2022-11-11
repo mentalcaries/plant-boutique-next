@@ -1,7 +1,6 @@
-import * as styles from '../../styles/Header.module.css';
 import {motion} from 'framer-motion';
 import Link from 'next/link';
-// import Burger from '../Burger/Burger';
+import Burger from '../components/Burger'
 
 function Header() {
   return (
@@ -49,7 +48,7 @@ function Header() {
           ))}
         </ul>
       </motion.nav>
-      {/* <Burger /> */}
+      <Burger />
       </div>
     </header>
   );

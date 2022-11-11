@@ -1,6 +1,6 @@
 import ProductCard from '../components/ProductCard';
 import PopupCard from '../components/PopupCard';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, MouseEvent } from 'react';
 import { motion } from 'framer-motion';
 import { collection } from '../utils/constants';
 import { Product } from '../utils/types';
@@ -11,25 +11,37 @@ type Props = {
   onOpen: () => void;
 };
 
-function Collection({ onClose, onOpen }: Props): JSX.Element {
+const Collection = (): JSX.Element => {
   const [cardData, setCardData] = useState<Product | null>(null);
   const [isPopupCardOpen, setIsPopupCardOpen] = useState<boolean>(false);
 
-  function handleCardClick(card: Product) {
+  const handleCardClick = (card: Product) => {
     setCardData(card);
-  }
+  };
 
-  function closePopups(): void {
-    setIsPopupCardOpen(false);
-  }
-
-  function handleOpenPopup(): void {
+  const handleOpenPopup = (): void => {
     setIsPopupCardOpen(true);
-  }
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${window.scrollY}px`;
+  };
+
+  const closePopups = (): void => {
+    setIsPopupCardOpen(false);
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  };
+
+  const handleOutsideClick = (event: MouseEvent<HTMLDivElement>): void => {
+    if ((event.target as Element).className === 'popup__overlay') {
+      closePopups();
+    }
+  };
 
   useEffect(() => {
-    const closeByEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+    const closeByEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
         closePopups();
       }
     };
@@ -57,11 +69,12 @@ function Collection({ onClose, onOpen }: Props): JSX.Element {
       </div>
       <PopupCard
         onClose={closePopups}
+        onOutsideClick={handleOutsideClick}
         isPopupCardOpen={isPopupCardOpen}
         cardData={cardData}
       />
     </motion.section>
   );
-}
+};
 
 export default Collection;

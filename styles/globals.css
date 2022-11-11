@@ -16,9 +16,9 @@ body {
 
 @import url(../vendor/fonts/fonts.css);
 @import url(./components/Header.css);
-@import url(./components/Burger.css);
 @import url(./components/Footer.css);
 @import url(./components/Main.css);
+@import url(./components/Burger.css);
 @import url(./components/About.css);
 @import url(./components/Collection.css);
 @import url(./components/Order.css);
