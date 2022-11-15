@@ -4,7 +4,7 @@ body {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -12,7 +12,7 @@ body {
     color: white;
     background: black;
   }
-}
+} */
 
 @import url(../vendor/fonts/fonts.css);
 @import url(./components/Header.css);

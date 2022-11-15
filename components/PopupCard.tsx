@@ -2,12 +2,12 @@ import Image from 'next/image';
 import { MouseEvent } from 'react';
 import { Product } from '../utils/types';
 
-type Props = {
+interface Props {
   isPopupCardOpen: boolean;
   cardData: Product | null;
   onOutsideClick: (event: MouseEvent<HTMLDivElement>) => void;
   onClose: () => void;
-};
+}
 
 const PopupCard = ({
   isPopupCardOpen,
