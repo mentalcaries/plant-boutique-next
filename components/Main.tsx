@@ -1,5 +1,6 @@
 import logo from '../public/images/pb-logo.png';
 import { motion } from 'framer-motion';
+import hero from '../public/images/hero.jpg'
 import Image from 'next/image';
 
 function Main() {
@@ -12,7 +13,7 @@ function Main() {
     >
       <div className="main__image">
         <Image
-          src="/../public/images/hero.jpg"
+          src={hero}
           alt="Coloured plant pots"
           fill
           style={{ objectFit: 'cover' }}
