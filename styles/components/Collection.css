@@ -1,6 +1,9 @@
 .collection {
   background-image: url('../../public/images/collection.jpg');
+  background-repeat: no-repeat;
+  max-width: 1440px;
   width: 100%;
+  margin: 0 auto;
 
 }
 

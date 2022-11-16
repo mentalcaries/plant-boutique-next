@@ -10,6 +10,16 @@ function Main() {
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
+      <div className="main__image">
+        <Image
+          src="/../public/images/hero.jpg"
+          alt="Coloured plant pots"
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
+        />
+      </div>
+
       <motion.div className="main__content">
         <Image
           src={logo}

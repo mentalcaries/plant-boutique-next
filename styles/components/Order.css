@@ -9,6 +9,7 @@
   justify-content: flex-end;
   align-items: center;
   padding: 0 16px;
+  margin: 0 auto;
 }
 
 .order__content {
@@ -19,7 +20,6 @@
   margin: 48px;
   display: flex;
   flex-direction: column;
-
 }
 
 .order__title {
@@ -38,12 +38,12 @@
   font-size: 20px;
 }
 
-.order__icons{
+.order__icons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.order__icon{
-max-width: 96px;
-max-height: 96px;
+.order__icon {
+  max-width: 96px;
+  max-height: 96px;
 }
