@@ -22,6 +22,7 @@ const ProductCard = ({ onOpen, product, onCardClick }: Props): JSX.Element => {
         alt="Product"
         className="card__image"
         placeholder="blur"
+        priority={true}
       />
       <motion.div
         className="card__overlay"

@@ -33,6 +33,7 @@ const PopupCard = ({
                   alt=""
                   className="popup__image"
                   key={index}
+                  placeholder="blur"
                 />
               ))}
             </div>
