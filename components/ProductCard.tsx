@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Product } from '../utils/types';
 import Image from 'next/image';
-import { toBase64, shimmer } from '../utils/constants';
 
 // fix type
 type Props = {
@@ -18,7 +17,12 @@ const ProductCard = ({ onOpen, product, onCardClick }: Props): JSX.Element => {
 
   return (
     <article className="card" onClick={handleClickProduct}>
-      <Image src={product.coverImage} alt="Product" className="card__image" blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}/>
+      <Image
+        src={product.coverImage}
+        alt="Product"
+        className="card__image"
+        placeholder="blur"
+      />
       <motion.div
         className="card__overlay"
         initial={{ opacity: 0 }}
