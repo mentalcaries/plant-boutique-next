@@ -161,7 +161,7 @@ const Contact = () => {
         <p className="contact__alert">
           {isEmailSubmitted
             ? '🌱Your message was sent'
-            : 'Something went wrong 🥀'}
+            : 'Something went wrong. 🥀'}
         </p>
       </Popup>
     </motion.section>
