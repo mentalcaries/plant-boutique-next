@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { ContactData } from '../utils/types';
+import Popup from '../components/Popup';
 
 const Contact = () => {
   const {
@@ -21,8 +22,11 @@ const Contact = () => {
     mode: 'onChange',
   });
 
+  const [isAlertOpen, setIsAlertOpen] = useState(false);
+  const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
+
   useEffect(() => {
-    if (formState.isSubmitSuccessful) {
+    if (formState.isSubmitSuccessful && isEmailSubmitted) {
       reset({
         name: '',
         email: '',
@@ -31,7 +35,7 @@ const Contact = () => {
         message: '',
       });
     }
-  }, [formState, reset]);
+  }, [formState, isEmailSubmitted, reset]);
 
   const submitEmail = async (data: ContactData) => {
     const { name, email, phone, subject, message } = data;
@@ -49,13 +53,18 @@ const Contact = () => {
       },
       method: 'POST',
     });
-
+    setIsAlertOpen(true);
+    
     const { error } = await res.json();
     if (error) {
+      setIsEmailSubmitted(false);
       console.log(error);
       return;
     }
-    console.log(name, email, subject, message, phone);
+    setIsEmailSubmitted(true);
+    setTimeout(() => {
+      setIsAlertOpen(false);
+    }, 2000);
   };
 
   return (
@@ -142,9 +151,19 @@ const Contact = () => {
           placeholder="Type your message here"
         ></textarea>
         <p className="contact__error">{errors.message?.message}</p>
-
-        <input type="submit" name="attachment" className="contact__submit" />
+        <input type="submit" name="submit" className="contact__submit" />
       </form>
+      <Popup
+        isPopupOpen={isAlertOpen}
+        onClose={() => setIsAlertOpen(false)}
+        type="alert"
+      >
+        <p className="contact__alert">
+          {isEmailSubmitted
+            ? '🌱Your message was sent'
+            : 'Something went wrong 🥀'}
+        </p>
+      </Popup>
     </motion.section>
   );
 };

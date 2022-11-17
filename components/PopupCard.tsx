@@ -5,7 +5,7 @@ import Popup from './Popup';
 
 interface PopupCardProps {
   isPopupCardOpen : boolean;
-  cardData: Product;
+  cardData: Product | null;
   onOutsideClick: (event: MouseEvent<HTMLDivElement>) => void
   onClose: () => void
 }
