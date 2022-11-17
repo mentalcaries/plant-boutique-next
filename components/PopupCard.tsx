@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import { MouseEvent } from 'react';
 import { Product } from '../utils/types';
+import Popup from './Popup';
 
-interface Props {
-  isPopupCardOpen: boolean;
-  cardData: Product | null;
-  onOutsideClick: (event: MouseEvent<HTMLDivElement>) => void;
-  onClose: () => void;
+interface PopupCardProps {
+  isPopupCardOpen : boolean;
+  cardData: Product;
+  onOutsideClick: (event: MouseEvent<HTMLDivElement>) => void
+  onClose: () => void
 }
 
 const PopupCard = ({
@@ -14,40 +15,31 @@ const PopupCard = ({
   cardData,
   onOutsideClick,
   onClose,
-}: Props): JSX.Element => {
+}: PopupCardProps) => {
   return (
-    <div className={`popup ${isPopupCardOpen ? 'popup_opened' : ''}`}>
-      <div className="popup__overlay" onClick={onOutsideClick}>
-        <div className="popup__container">
-          <button
-            className="popup__close-btn"
-            type="button"
-            onClick={onClose}
-          />
-          <article className="popup__content">
-            <h2 className="popup__title">{cardData?.title}</h2>
-            <div className="popup__images">
-              {cardData?.productImages.map((image, index) => (
-                <Image
-                  src={image}
-                  alt=""
-                  className="popup__image"
-                  key={index}
-                  placeholder="blur"
-                />
-              ))}
-            </div>
-            {cardData?.description.map((paragraph, index) => {
-              return (
-                <p className="popup__text" key={index}>
-                  {paragraph}
-                </p>
-              );
-            })}
-          </article>
+    <Popup isPopupOpen={isPopupCardOpen} onClose={onClose} onOutsideClick={onOutsideClick}>
+      <article className="popup__content">
+        <h2 className="popup__title">{cardData?.title}</h2>
+        <div className="popup__images">
+          {cardData?.productImages.map((image, index) => (
+            <Image
+              src={image}
+              alt=""
+              className="popup__image"
+              key={index}
+              placeholder="blur"
+            />
+          ))}
         </div>
-      </div>
-    </div>
+        {cardData?.description.map((paragraph, index) => {
+          return (
+            <p className="popup__text" key={index}>
+              {paragraph}
+            </p>
+          );
+        })}
+      </article>
+    </Popup>
   );
 };
 
