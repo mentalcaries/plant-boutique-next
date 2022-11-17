@@ -5,3 +5,11 @@ export type Product ={
   productImages: string[]
 
 }
+
+export interface ContactData {
+  name: string;
+  phone: string;
+  email: string;
+  subject: string;
+  message: string;
+}

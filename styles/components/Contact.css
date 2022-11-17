@@ -24,9 +24,7 @@
   margin: 0 12px;
 }
 
-.contact__title{
 
-}
 
 .contact__label{
   margin-bottom: 12px;
@@ -63,3 +61,14 @@
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.contact__error {
+  text-align: end;
+  color: red;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 0;
+  padding: 0px 20px;
+  min-height: 14px;
+}
+

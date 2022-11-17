@@ -1,24 +1,48 @@
-import { useState, SyntheticEvent } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useForm } from 'react-hook-form';
+import { ContactData } from '../utils/types';
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('select');
-  const [message, setMessage] = useState('');
-  const [attachment, setAttachment] = useState([]);
+  const {
+    register,
+    handleSubmit,
+    formState,
+    reset,
+    formState: { errors, isValid, isDirty },
+  } = useForm({
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '868-',
+      subject: 'select',
+      message: '',
+    },
+    mode: 'onChange',
+  });
 
-  const handleSubmit = async (event: SyntheticEvent) => {
-    event.preventDefault();
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({
+        name: '',
+        email: '',
+        phone: '868-',
+        subject: '',
+        message: '',
+      });
+    }
+  }, [formState, reset]);
+
+  const submitEmail = async (data: ContactData) => {
+    const { name, email, phone, subject, message } = data;
+
     const res = await fetch('/api/sendgrid', {
       body: JSON.stringify({
-        email,
         name,
+        email,
+        phone,
         subject,
         message,
-        phone,
-        attachment,
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -41,49 +65,60 @@ const Contact = () => {
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
-      <form className="contact__form" onSubmit={handleSubmit}>
+      <form className="contact__form" onSubmit={handleSubmit(submitEmail)}>
         <h2 className="contact__title">Get In Touch!</h2>
         <label htmlFor="name" className="contact__label">
           Name:
         </label>
+
         <input
-          name="name"
-          type="text"
-          placeholder="Name"
+          {...register('name', {
+            required: 'Name cannot be empty',
+            minLength: {
+              value: 2,
+              message: 'Name must be at least 2 characters',
+            },
+            maxLength: 30,
+          })}
           className="contact__input"
-          onChange={(event) => setName(event.target.value)}
         />
+        <p className="contact__error">{errors.name?.message}</p>
 
         <label htmlFor="phone" className="contact__label">
           Phone:
         </label>
         <input
-          name="phone"
-          placeholder="Mobile Number"
-          type="text"
+          {...register('phone', {
+            required: 'Phone number is required',
+            pattern: {
+              value: /[0-9]{3}-?[0-9]{3}-?[0-9]{4}/,
+              message: 'Invalid phone number',
+            },
+          })}
           className="contact__input"
-          onChange={(event) => setPhone(event.target.value)}
         />
+        <p className="contact__error">{errors.phone?.message}</p>
 
         <label htmlFor="email" className="contact__label">
           Email:
         </label>
         <input
-          name="email"
-          placeholder="hello@gmail.com"
-          type="email"
+          {...register('email', {
+            required: 'Email address is required',
+            pattern: { value: /^\S+@\S+$/i, message: 'Invalid Email address' },
+          })}
           className="contact__input"
-          onChange={(event) => setEmail(event.target.value)}
         />
+        <p className="contact__error">{errors.email?.message}</p>
 
         <label htmlFor="questions" className="contact__label">
           Choose a topic:
         </label>
         <select
+          {...register('subject')}
           name="questions"
           id="questions"
           className="contact__options"
-          onChange={(event) => setSubject(event.target.value)}
           defaultValue="select"
         >
           <option value="select" disabled>
@@ -98,23 +133,15 @@ const Contact = () => {
           Question
         </label>
         <textarea
-          name="query"
-          id="query"
+          {...register('message', {
+            required: 'Message cannot be empty',
+            minLength: { value: 10, message: 'Message too short' },
+          })}
+          id="message"
           className="contact__query"
           placeholder="Type your message here"
-          onChange={(event) => setMessage(event.target.value)}
         ></textarea>
-
-        {/* <input
-          type="file"
-          name="attachment"
-          id=""
-          className="contact__label"
-          placeholder="Add a photo"
-          multiple accept="image/*"
-          onChange={(event) => setAttachment([...event.target.files])}
-          value={attachment}
-        /> */}
+        <p className="contact__error">{errors.message?.message}</p>
 
         <input type="submit" name="attachment" className="contact__submit" />
       </form>
