@@ -8,13 +8,13 @@ import mail from '../public/images/mail.svg';
 
 const Order = () => {
   return (
-    <motion.section
-      className="order"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 0.3,  duration: 0.5 } }}
-      exit={{ opacity: 0, transition: { duration: 0.3 } }}
-    >
-      <div className="order__image">
+    <section className="order">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.5 } }}
+        exit={{ opacity: 0, transition: { duration: 0.3 } }}
+        className="order__image"
+      >
         <Image
           src={background}
           alt="Coloured plant pots"
@@ -23,8 +23,13 @@ const Order = () => {
           priority={true}
         />
         {/* Photo by <a href="https://unsplash.com/es/@magali_merzougui?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Magali Merzougui</a>*/}
-      </div>
-      <div className="order__content">
+      </motion.div>
+      <motion.div
+        className="order__content"
+        initial={{ opacity: 0, y: 75 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 0.4 }}
+      >
         <div className="order__container">
           <h2 className="order__title">How To Order</h2>
           {/* <p className="order__subtitle">We're still growing!</p> */}
@@ -45,8 +50,8 @@ const Order = () => {
             </Link>
           </div>
         </div>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
 

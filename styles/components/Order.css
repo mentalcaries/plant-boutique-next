@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgb(255,234,220);
+background: radial-gradient(circle, rgba(255,234,220,1) 0%, rgba(255,255,255,1) 30%);
 }
 
 .order__content {
@@ -12,6 +14,7 @@
   width:100%;
   display: flex;
   justify-content: flex-end;
+  z-index: 5;
 }
 
 .order__container{
@@ -28,7 +31,7 @@
 
 .order__image{
   position: fixed;
-  z-index: -1;
+  z-index: 0;
   width: 100vw;
   height: 80vh;
   max-width: 1440px;
