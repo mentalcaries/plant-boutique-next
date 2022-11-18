@@ -1,29 +1,33 @@
 import logo from '../public/images/pb-logo.png';
 import { motion } from 'framer-motion';
-import hero from '../public/images/hero.jpg'
+import hero from '../public/images/hero.jpg';
 import Image from 'next/image';
 
 function Main() {
   return (
-    <motion.section
-      className="main"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      exit={{ opacity: 0, transition: { duration: 0.3 } }}
-    >
-      <div className="main__image">
+    <section className="main">
+      <motion.div
+        className="main__image"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 0.3, duration: 0.5 } }}
+        exit={{ opacity: 0, transition: { duration: 0.3 } }}
+      >
         <Image
           src={hero}
           alt="Coloured plant pots"
           fill
           style={{ objectFit: 'cover' }}
           priority={true}
-
         />
-      </div>
+      </motion.div>
 
-      <motion.div className="main__content">
-        <div className='main__container'>
+      <motion.div
+        className="main__content"
+        initial={{ opacity: 0, y: 75 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className="main__container">
           <Image
             src={logo}
             alt="PB Logo with Golden Leaves"
@@ -34,7 +38,7 @@ function Main() {
           <p className="main__subtitle">Welcome to the Plant Boutique</p>
         </div>
       </motion.div>
-    </motion.section>
+    </section>
   );
 }
 export default Main;

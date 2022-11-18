@@ -11,8 +11,8 @@ function Header() {
           src='./images/pb-logo.png'
           alt="Plant Boutique Logo"
           className="header__logo"
-          initial={{opacity: 0}}
-          animate={{opacity: 1}}
+          initial={{opacity: 0, x: -250}}
+          animate={{opacity: 1, x: 0}}
           transition={{duration: 0.5}}
         />
       </Link>

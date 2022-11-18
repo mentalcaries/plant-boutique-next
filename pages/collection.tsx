@@ -55,10 +55,11 @@ const Collection = (): JSX.Element => {
     <motion.section
       className="collection"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      animate={{ opacity: 1, transition: {delay: 0.4, duration: 0.5 } }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
       <div className="collection__cards">
+        
         {collection.map((product, index) => (
           <ProductCard
             onOpen={handleOpenPopup}
