@@ -14,7 +14,7 @@ background: radial-gradient(circle, rgba(255,234,220,1) 0%, rgba(255,255,255,1) 
   width:100%;
   display: flex;
   justify-content: flex-end;
-  z-index: 5;
+  z-index: 4;
 }
 
 .order__container{

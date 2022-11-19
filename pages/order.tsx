@@ -21,6 +21,7 @@ const Order = () => {
           fill
           style={{ objectFit: 'cover' }}
           priority={true}
+          placeholder="blur"
         />
         {/* Photo by <a href="https://unsplash.com/es/@magali_merzougui?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Magali Merzougui</a>*/}
       </motion.div>

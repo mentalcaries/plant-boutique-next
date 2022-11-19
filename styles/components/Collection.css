@@ -4,7 +4,6 @@
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-
 }
 
 .collection__cards {
@@ -17,8 +16,20 @@
   gap: 32px;
 }
 
-@media screen and (max-width:540px) {
-  .collection__cards{
-    padding:0;
+@media screen and (max-width: 832px ) {
+  .collection {
+    max-height: 80vh;
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 540px) {
+
+  .collection{
+    max-height: 78vh;
+  }
+
+  .collection__cards {
+    padding: 0;
   }
 }

@@ -112,6 +112,8 @@
     max-width: 320px;
     margin: 4px;
     padding: 16px;
+    max-height: 75vh;
+    overflow: scroll;
   }
 
   .about__title{
