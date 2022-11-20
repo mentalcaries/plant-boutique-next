@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   background-image: url('../../public/images/hero.jpg');
+  background-position: center;
 }
 
 .main__content {
