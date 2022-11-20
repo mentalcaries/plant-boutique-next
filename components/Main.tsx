@@ -5,22 +5,12 @@ import Image from 'next/image';
 
 function Main() {
   return (
-    <section className="main">
-      <motion.div
-        className="main__image"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 0.3, duration: 0.5 } }}
-        exit={{ opacity: 0, transition: { duration: 0.3 } }}
-      >
-        <Image
-          src={hero}
-          alt="Coloured plant pots"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority={true}
-        />
-      </motion.div>
-
+    <motion.section
+      className="main"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 0.3, duration: 0.5 } }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+    >
       <motion.div
         className="main__content"
         initial={{ opacity: 0, y: 75 }}
@@ -38,7 +28,7 @@ function Main() {
           <p className="main__subtitle">Welcome to the Plant Boutique</p>
         </div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 }
 export default Main;
