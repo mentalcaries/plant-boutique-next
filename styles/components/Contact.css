@@ -57,7 +57,7 @@
   max-width: 240px;
   width: 100%;
   padding: 8px;
-  min-height: 24px;
+  min-height: 34px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -74,4 +74,11 @@
 
 .contact__alert{
   font-size: 20px;
+}
+
+@media screen and (max-width: 540px) {
+  .contact__form{
+    max-height: 70vh;
+    overflow: scroll;
+  }
 }

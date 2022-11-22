@@ -57,5 +57,6 @@
   }
   .header__logo {
     max-width: 240px;
+    max-height: 64px;
   }
 }
