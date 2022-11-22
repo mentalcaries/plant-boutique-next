@@ -1,4 +1,4 @@
-import styles from '../components/styles/order.module.css'
+import styles from '../styles/order.module.css'
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,14 +15,14 @@ const Order = () => {
         exit={{ opacity: 0, transition: { duration: 0.3 } }}
         className={styles.order__image}
       >
-        <Image
+        {/* <Image
           src={background}
           alt="Coloured plant pots"
           fill
           style={{ objectFit: 'cover' }}
           priority={true}
           placeholder="blur"
-        />
+        /> */}
         {/* Photo by <a href="https://unsplash.com/es/@magali_merzougui?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Magali Merzougui</a>*/}
       </motion.div>
       <motion.div
