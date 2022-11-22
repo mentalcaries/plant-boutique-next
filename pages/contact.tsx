@@ -151,7 +151,7 @@ const Contact = () => {
           placeholder="Type your message here"
         ></textarea>
         <p className="contact__error">{errors.message?.message}</p>
-        <input type="submit" name="submit" className="contact__submit" />
+        <button type="submit" name="submit" className="contact__submit">Submit</button>
       </form>
       <Popup
         isPopupOpen={isAlertOpen}
