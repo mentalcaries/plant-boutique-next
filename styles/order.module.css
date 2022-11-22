@@ -6,23 +6,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(255,234,220);
-background: radial-gradient(circle, rgba(255,234,220,1) 0%, rgba(255,255,255,1) 30%);
   background-image: url('../public/images/order.jpg');
   background-position: center;
   background-size: cover;
-
 }
 
 .order__content {
   max-width: 1280px;
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   z-index: 4;
 }
 
-.order__container{
+.order__container {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
   max-width: 480px;
@@ -33,8 +30,7 @@ background: radial-gradient(circle, rgba(255,234,220,1) 0%, rgba(255,255,255,1) 
   align-items: flex-end;
 }
 
-
-.order__image{
+.order__image {
   position: fixed;
   z-index: 0;
   width: 100vw;
