@@ -1,4 +1,4 @@
-.contact{
+.contact {
   background-image: url('../../public/images/contact.jpg');
   max-width: 1440px;
   width: 100%;
@@ -11,7 +11,7 @@
   margin: 0 auto;
 }
 
-.contact__form{
+.contact__form {
   display: flex;
   flex-direction: column;
   max-width: 480px;
@@ -24,14 +24,11 @@
   margin: 0 12px;
 }
 
-
-
-.contact__label{
+.contact__label {
   margin-bottom: 12px;
-  
 }
 
-.contact__input{
+.contact__input {
   font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
   margin-bottom: 12px;
   padding: 8px 12px;
@@ -40,7 +37,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.contact__query{
+.contact__query {
   font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
   margin-bottom: 20px;
   padding: 12px 12px;
@@ -50,7 +47,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.contact__submit{
+.contact__submit {
   margin: 12px auto;
   border: none;
   border-radius: 16px;
@@ -59,6 +56,7 @@
   padding: 8px;
   min-height: 34px;
   background-color: #fff;
+  color: #0f1626;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -72,12 +70,12 @@
   min-height: 14px;
 }
 
-.contact__alert{
+.contact__alert {
   font-size: 20px;
 }
 
 @media screen and (max-width: 540px) {
-  .contact__form{
+  .contact__form {
     max-height: 70vh;
     overflow: scroll;
   }
