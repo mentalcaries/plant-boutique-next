@@ -28,13 +28,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
 
 .card__title{
   font-family: Playfair Display, Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
+  background-color: white;
+  border-radius: 25px;
+  padding: 12px 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   
 }
 

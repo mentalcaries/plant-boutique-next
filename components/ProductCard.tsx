@@ -26,11 +26,9 @@ const ProductCard = ({ onOpen, product, onCardClick }: Props): JSX.Element => {
       />
       <motion.div
         className="card__overlay"
-        initial={{ opacity: 0 }}
-        whileHover={{ opacity: 1 }}
-        transition={{ duration: 0.4 }}
-        whileTap={{ opacity: 1 }}
-        exit={{ opacity: 0}}
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.3 }}
       >
         <h2 className="card__title">{product.title}</h2>
       </motion.div>

@@ -72,11 +72,18 @@ const Burger = () => {
                 ['Order', 'order'],
                 ['Contact', 'contact'],
               ].map(([title, url]) => (
-                <li className="burger__item" key={title} onClick={toggleMenu}>
+                <motion.li
+                  className="burger__item"
+                  key={title}
+                  onClick={toggleMenu}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1.1 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
                   <Link href={url} className="burger__link">
                     {title}
                   </Link>
-                </li>
+                </motion.li>
               ))}
             </motion.ul>
           </motion.div>

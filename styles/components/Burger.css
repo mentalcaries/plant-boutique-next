@@ -28,7 +28,6 @@
 
 .burger__item {
   padding-bottom: 4px;
-  transition: linear 0.3s;
   list-style: none;
   margin-bottom: 12px;
 }
@@ -44,9 +43,7 @@
   line-height: 1.5;
 }
 
-.burger__item:hover {
-  opacity: 0.6;
-}
+
 
 .burger__overlay {
   background-color: rgba(0, 0, 0, 0.5);
