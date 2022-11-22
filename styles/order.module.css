@@ -30,15 +30,6 @@
   align-items: flex-end;
 }
 
-.order__image {
-  position: fixed;
-  z-index: 0;
-  width: 100vw;
-  height: 80vh;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 .order__title {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
   margin: 12px 0;

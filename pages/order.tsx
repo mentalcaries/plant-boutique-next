@@ -8,15 +8,13 @@ import mail from '../public/images/mail.svg';
 
 const Order = () => {
   return (
-    <section className={styles.order}>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.5 } }}
-        exit={{ opacity: 0, transition: { duration: 0.3 } }}
-        className={styles.order__image}
-      >
+    <motion.section
+      className={styles.order}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 0.3, duration: 0.5 } }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+    >
         {/* Photo by <a href="https://unsplash.com/es/@magali_merzougui?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Magali Merzougui</a>*/}
-      </motion.div>
       <motion.div
         className={styles.order__content}
         initial={{ opacity: 0, y: 75 }}
@@ -47,7 +45,7 @@ const Order = () => {
           </div>
         </div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 
