@@ -13,7 +13,6 @@ const About = () => {
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
     >
-      <div className="about__overlay">
         <motion.div
           className="about__photos"
           initial={{ opacity: 0, x: -175 }}
@@ -48,7 +47,6 @@ const About = () => {
             something for your plant babies!
           </p>
         </motion.div>
-      </div>
     </motion.section>
   );
 };

@@ -2,7 +2,7 @@
   background-image: url('../../public/images/contact.jpg');
   max-width: 1440px;
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -16,12 +16,11 @@
   flex-direction: column;
   max-width: 480px;
   width: 100%;
-  min-height: 480px;
   background-color: rgba(255, 234, 220, 0.9);
   border-radius: 16px;
   padding: 24px;
   font-family: Playfair Display, Georgia, 'Times New Roman', Times, serif;
-  margin: 0 12px;
+  margin: 24px 12px;
 }
 
 .contact__label {
@@ -72,11 +71,4 @@
 
 .contact__alert {
   font-size: 20px;
-}
-
-@media screen and (max-width: 540px) {
-  .contact__form {
-    max-height: 70vh;
-    overflow: scroll;
-  }
 }
