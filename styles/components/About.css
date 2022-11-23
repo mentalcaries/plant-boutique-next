@@ -2,7 +2,6 @@
   background-image: url('../../public/images/about.jpg');
   max-width: 1440px;
   width: 100%;
-  /* min-height: 80vh; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -10,7 +9,7 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  margin: 0 auto;
+  padding: 12px 0px;
 }
 
 .about__photos {
@@ -84,7 +83,7 @@
 }
 @media screen and (max-width: 540px) {
   .about {
-    width: unset;
+    justify-content: center;
   }
   .about__overlay {
     justify-content: center;

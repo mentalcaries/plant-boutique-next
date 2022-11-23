@@ -21,7 +21,6 @@ const Contact = () => {
     },
     mode: 'onChange',
   });
-
   const [isAlertOpen, setIsAlertOpen] = useState(false);
   const [isEmailSubmitted, setIsEmailSubmitted] = useState(false);
 
@@ -54,7 +53,7 @@ const Contact = () => {
       method: 'POST',
     });
     setIsAlertOpen(true);
-    
+
     const { error } = await res.json();
     if (error) {
       setIsEmailSubmitted(false);
@@ -151,7 +150,9 @@ const Contact = () => {
           placeholder="Type your message here"
         ></textarea>
         <p className="contact__error">{errors.message?.message}</p>
-        <button type="submit" name="submit" className="contact__submit">Submit</button>
+        <button type="submit" name="submit" className="contact__submit">
+          Submit
+        </button>
       </form>
       <Popup
         isPopupOpen={isAlertOpen}

@@ -36,8 +36,7 @@
   border-radius: 16px;
   max-width: 600px;
   width: 100%;
-  padding: 40px;
-  margin: 48px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   z-index: 10;
@@ -46,16 +45,17 @@
 .popup__container_alert{
   max-width: 280px;
   align-items: center;
-  margin: 12px
+  min-height: 120px;
+  justify-content: space-between;
 }
 
 .popup__close-btn {
   background-image: url('../../public/images/close-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  min-height: 40px;
-  min-width: 40px;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
   border: 0;
   background-color: transparent;
   padding: 0;
