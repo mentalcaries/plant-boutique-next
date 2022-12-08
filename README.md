@@ -10,4 +10,9 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" height=20 alt="css logo">
   <img src="https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue" height=20 alt="framer logo">
   <img src="https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=Twilio&logoColor=white" height=20 alt="twilio logo">
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" height=20 alt="vercel logo">
 </div>
+
+## About the Project
+A simple website for **The Plant Boutique** : a small business focused on custom, handcrafted plant accessories.
+
