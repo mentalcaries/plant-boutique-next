@@ -11,7 +11,7 @@ const Footer = () => {
         >
           <Image
             src="/images/ig.png"
-            alt=""
+            alt="instagram logo"
             className="footer__icon"
             width={28}
             height={28}
