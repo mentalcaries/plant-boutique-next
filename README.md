@@ -14,5 +14,9 @@
 </div>
 
 ## About the Project
-A simple website for **The Plant Boutique** : a small business focused on custom, handcrafted plant accessories.
+A website for **The Plant Boutique** : a small business focused on custom, handcrafted plant accessories. The UI was designed for a modern, yet elegant aesthetic.
 
+## Features
+- Responsive design down to 320px
+- Animations between pages and interacting with menu items
+- 

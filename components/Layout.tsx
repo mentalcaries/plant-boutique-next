@@ -9,8 +9,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <Head>
         <title>The Plant Boutique</title>
         <meta
-          name="The Plant Boutique"
-          content="chic handcrafted plant accessories."
+          name="description"
+          content="Chic handcrafted plant accessories."
+          
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

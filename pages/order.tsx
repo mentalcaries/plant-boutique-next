@@ -2,7 +2,6 @@ import styles from '../styles/order.module.css';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import background from '../public/images/order.jpg';
 import instagram from '../public/images/ig.gif';
 import mail from '../public/images/mail.svg';
 
