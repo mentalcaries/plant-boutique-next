@@ -34,4 +34,4 @@ A website for **The Plant Boutique** : a small business focused on custom, handc
 | React Hook Form | Form validation, and to ensure that empty forms weren't being submitted from the site |
 | Deployment | Vercel |
 
-See live site [here](https://plantboutiquett.com/)
+See live site <a href="https://www.plantboutiquett.com/" target="_blank">here<a/>
