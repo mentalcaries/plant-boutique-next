@@ -16,9 +16,7 @@
 ## About the Project
 A website for **The Plant Boutique** : a small business focused on custom, handcrafted plant accessories. The UI was designed for a modern, yet elegant aesthetic.
 
-<img width="720" align="center" src="https://user-images.githubusercontent.com/77761206/206771698-7a3ac805-3e7a-4c4c-add3-6f5a668035f3.png" alt="plant boutique landing page">
-
-
+<img width="720" align="center" src="https://user-images.githubusercontent.com/77761206/206772200-7ed6938a-c054-4eeb-99b1-879a1bdaf090.png" alt="plant boutique landing page">
 
 ## Features
 - Responsive design down to 320px
