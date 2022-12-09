@@ -16,7 +16,9 @@
 ## About the Project
 A website for **The Plant Boutique** : a small business focused on custom, handcrafted plant accessories. The UI was designed for a modern, yet elegant aesthetic.
 
-<video src='https://github.com/mentalcaries/misc/blob/main/pb.mov' width=480 />
+<div align="center">
+<video src="https://github.com/mentalcaries/misc/blob/main/pb.mov" width=480 />
+</div>
 
 ## Features
 - Responsive design down to 320px
