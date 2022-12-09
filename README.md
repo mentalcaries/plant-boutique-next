@@ -16,7 +16,23 @@
 ## About the Project
 A website for **The Plant Boutique** : a small business focused on custom, handcrafted plant accessories. The UI was designed for a modern, yet elegant aesthetic.
 
+https://github.com/mentalcaries/misc/blob/main/pb.mov
+
 ## Features
 - Responsive design down to 320px
 - Animations between pages and interacting with menu items
-- 
+- Contact form to send emails to the business directly from the site
+- Form validation for the contact form
+
+## Tech Stack
+| Technology |  |
+|---|---|
+| TypeScript | To ensure type safety and reduce errors throughout the app, especially with passing of props |
+| NextJS | For server side rendered pages, built-in API handling, SEO and performance optimizations (eg. image handling) |
+| CSS | Handcrafted styles, straight from the heart
+| Framer Motion | For production ready animations |
+| SendGrid API | To allow for email handling and submission from the page itself) |
+| React Hook Form | Form validation, and to ensure that empty forms weren't being submitted from the site |
+| Deployment | Vercel |
+
+See live site [here](https://plantboutiquett.com/)
