@@ -31,10 +31,17 @@ A website for **The Plant Boutique** : a small business focused on custom, handc
 |---|---|
 | TypeScript | To ensure type safety and reduce errors throughout the app, especially with passing of props |
 | NextJS | For server side rendered pages, built-in API handling, SEO and performance optimizations (eg. image handling) |
-| CSS | Handcrafted styles, straight from the heart
+| CSS | Handcrafted styles, straight from the heart. Flat BEM methodology was used for class names. Global styles will gradually be transitioned to component level styles according to NextJS recommendations |
 | Framer Motion | For production ready animations |
 | SendGrid API | To allow for email handling and submission from the page itself) |
 | React Hook Form | Form validation, and to ensure that empty forms weren't being submitted from the site |
 | Deployment | Vercel |
+
+### Lighthouse Score
+<img width="499" alt="Screen Shot 2022-12-09 at 8 49 57 AM" src="https://user-images.githubusercontent.com/77761206/206781680-6b4dfda6-a65e-4a5e-a172-a78bc71476a8.png">
+
+### Proposed additions
+- Integrate with Instagram API as an image gallery/product blog (the owner regularly posts content to Instagram)
+- Implement reCaptcha to further increase security from email contact form
 
 See live site <a href="https://www.plantboutiquett.com/" target="_blank">here<a/>
